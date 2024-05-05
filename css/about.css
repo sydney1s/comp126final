@@ -1,0 +1,176 @@
+/* body {
+    justify-content: center;
+    align-items: center;
+} */
+
+.lora{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 800;
+    font-style: bold;
+}
+
+
+.playfair{
+    font-family: "Playfair Display SC", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1{
+    font-size: 50px;
+    margin-left: 3%;
+
+}
+
+
+h3{
+    font-size: 30px;
+
+}
+
+
+h5{
+    font-size: 20px;
+
+}
+
+
+.grid-layout{
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+
+header{
+    grid-area: header;
+    /* background-color: #f9b4ed; */
+    background-color: #E574BC;
+    color: white;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    top: 0;
+} 
+
+
+main{
+    grid-area: main;
+    /* margin-top: 10%; */
+}
+
+
+footer{
+    grid-area: footer;
+    /* background-color: #f9b4ed; */
+    background-color: #E574BC;
+    height: 50px;
+    color: white;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.long-img {
+    background-image: url(../imgs/abouttop.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    display: flex;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.artist{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+}
+
+.artist-img{
+    align-self: center;    
+    width: 70%;
+    height: 80%
+}
+
+
+.artist-text{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin: 7% 5%;
+}
+
+
+.read-btn {
+    background-color: #E574BC;
+    color: white;
+    text-align: center;
+    width: 30%;
+    height: 30px;
+    padding-top: 15px;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 5%;
+}
+
+.read-btn:hover {
+    background-color: #771490;
+}
+
+@media screen and (min-width: 768px){
+    .artist{
+        display: grid;
+        grid-template-columns: 2;        
+    }
+
+    
+    .artist-img{
+        grid-column: 1/2;
+        align-self: center;
+        justify-self: center;  
+        width: 80%;
+        height: 70%;
+        margin-left: 5%;
+        
+    }
+    
+    
+    .artist-text{
+        grid-column: 2/3;
+        text-align: justify;
+    }
+}    
+
+
+
+
+    
+

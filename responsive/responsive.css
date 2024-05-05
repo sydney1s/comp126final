@@ -1,0 +1,175 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: white;
+
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+@font-face {
+  font-family: "responsivenav";
+  src: url("responsive/icons/responsivenav.eot");
+  src: url("responsive/icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("responsive/icons/responsivenav.ttf") format("truetype"),
+    url("responsive/icons/responsivenav.woff") format("woff"),
+    url("responsive/icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-toggle {
+  text-decoration: none;
+  text-indent: -300px;
+  position: relative;
+  overflow: hidden;
+  width: 60px;
+  height: 55px;
+  float: right;
+}
+
+.nav-toggle:before {
+  color: white; /* edit this to change the icon color */
+  font: normal 40px "responsivenav"; /* edit font-size (28px) to change the icon size */
+  text-transform: none;
+  text-align: center;
+  position: absolute;
+  content: "\2261"; /* hamburger icon */
+  text-indent: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-toggle:hover{
+  animation: zoom 350ms forwards;
+}
+
+.nav-toggle.active:before{
+  font-size: 30px;
+  content: "\78"; /* X/close icon */
+
+}
+
+@keyframes zoom {
+  100% {
+      transform: scale(1.3);
+  }
+}
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.nav-collapse a:hover{
+  color: #771490;
+  cursor: pointer;
+  animation: zoom 350ms forwards;
+}
+
+
+.nav-collapse li {
+  display: block;
+
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 55px;
+  padding: 0 20px;
+  color: white;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.nav-collapse,
+.nav-collapse * {
+  box-sizing: border-box;
+}
+
+.nav-collapse,
+.nav-collapse ul {
+list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.nav-collapse a {
+  text-decoration: none;
+  padding: 0.7em 1em;
+  color: white;
+  width: 100%;
+  display: block;
+  font-size: 20px;
+}
+
+.nav-collapse ul ul a {
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse ul {
+  flex-direction: row;
+  align-items: center;
+}
+  
+  .nav-collapse li {
+    width: auto;
+  }
+
+  .nav-collapse a {
+    padding: 1.02em 2em;
+    text-align: center;
+    border-top: 0;
+    margin: 0;
+  }
+
+  .nav-collapse ul ul a {
+    display: none;
+  }
+
+  .nav-collapse.closed {
+    max-height: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+
+}
